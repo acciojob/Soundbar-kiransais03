@@ -9,10 +9,12 @@ document.getElementById('wrong').addEventListener('click',makeasound);
 document.getElementById('stop').addEventListener('click',stopasound);
 
 function makeasound(event) {
-	// let name=event.target.id;
+	let name=event.target.id;
+    if(audio1) {
     audio1.pause();
     audio1.currentTime=0;
-    console.log(name,event,event.target);
+    }
+    // console.log(name,event,event.target);
 	audio1 = new Audio(`./sounds/${name}.mp3`);
 	audio1.play();
 }
