@@ -9,11 +9,16 @@ document.getElementById('wrong').addEventListener('click',makeasound);
 document.getElementById('stop').addEventListener('click',stopasound);
 
 function makeasound(event) {
-	let name=event.id;
-	audio1 = new Audio(`./sounds/${name}`);
+	// let name=event.target.id;
+    audio1.pause();
+    audio1.currentTime=0;
+    console.log(name,event,event.target);
+	audio1 = new Audio(`./sounds/${name}.mp3`);
 	audio1.play();
 }
 
 function stopasound(event) {
-	audio1.stop();
+    // console.log('entered');
+	audio1.pause();
+    audio1.currentTime=0;
 }
