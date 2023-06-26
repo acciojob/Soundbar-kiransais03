@@ -1,1 +1,22 @@
 /*  your css code here. If applicable */
+#buttons {
+	display:flex;
+	column-gap:10px;
+	height:fit-content;
+}
+
+.btn,.stop {
+		color:white;
+	background-color:darkslateblue;
+}
+
+body {
+	background-color:mediumpurple;
+}
+
+.container {
+display:flex;
+justify-content:center;
+align-items:center;
+height: 100vh;
+}
